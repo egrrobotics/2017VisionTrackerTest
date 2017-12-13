@@ -23,7 +23,7 @@ public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
-	Cameras camera = new Cameras();
+	public static Cameras camera;
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -38,6 +38,9 @@ public class Robot extends IterativeRobot {
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
+		SmartDashboard.putString("Hello ", "World");
+		System.out.println("Please work");
+		camera = new Cameras();
 		camera.startCamera();
 	}
 

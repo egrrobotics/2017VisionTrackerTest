@@ -62,7 +62,7 @@ public class Cameras extends Subsystem implements Runnable {
     public void run() {
         int localWidth = 320;
         int localHeight = 240;
-        camera.setResolution(localWidth, localHeight);//sets resolution (7mb/s bandwidth limit!)
+        //camera.setResolution(localWidth, localHeight);//sets resolution (7mb/s bandwidth limit!)
         camera.setPixelFormat(PixelFormat.kYUYV);//sets the pixel format for fast camera switching (C920)
         camera.setFPS(20);//sets fps
         camera.setBrightness(20);
